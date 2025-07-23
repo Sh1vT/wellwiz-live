@@ -68,6 +68,80 @@
             padding: 0 1.5rem;
         }
 
+        /* Responsive grid for features and testimonials */
+        .features-grid, .testimonials-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 640px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Responsive header/footer */
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        /* Responsive hero */
+        .hero-title {
+            font-size: 2.2rem;
+        }
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+        @media (min-width: 640px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-subtitle {
+                font-size: 1.15rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 4.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Prevent horizontal overflow on mobile */
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        /* Padding for mobile */
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
         /* Header */
         header {
             position: relative;
@@ -670,11 +744,6 @@
             margin: 0 auto;
         }
 
-        .features-grid {
-            display: grid;
-            gap: 2rem;
-        }
-
         .feature-card {
             padding: 2rem;
             background: linear-gradient(135deg, var(--black-darker) 60%, var(--black) 100%);
@@ -1009,7 +1078,7 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        <span class="gradient-text">Health</span> & <span class="gradient-text">Well being</span>
+                        <span class="gradient-text">Your Health</span> & <span class="gradient-text">Wellness Companion</span>
                     </h1>
                     <p class="hero-subtitle">
                         Wellwiz is your all-in-one health and wellness app. Chat with our medical AI, manage medications, get emergency help, and track your well-being—all in one secure place.
@@ -1119,7 +1188,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    Built for <span class="gradient-text">care</span>
+                    Built for <span class="gradient-text">Your Health & Wellbeing</span>
                 </h2>
                 <p class="section-subtitle">
                     Wellwiz empowers you to manage your health, connect with professionals, and get support—anytime, anywhere.
